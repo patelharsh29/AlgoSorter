@@ -1,0 +1,148 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #dfdcdc;
+}
+
+/* Controls Section Styling */
+#controls {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ecf2ec;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgb(179, 179, 179);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#controls label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#controls input,
+#controls select,
+#controls button {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-color: #b2bebd;
+}
+
+#controls input {
+    margin-bottom: 10px;
+}
+
+#controls button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+#controls button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Visualization Container */
+#array-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50vh;  /* 50% of the viewport height */
+    width: 50vw;   /* 50% of the viewport width */
+    margin: 20px auto;
+    border: 2px solid #000000;
+    position: relative;
+    background-color: #969696;
+    border-radius: 10px;
+}
+
+/* Bar Styling */
+.bar {
+    background-color: rgb(0, 0, 0);
+    margin: 0 1px;
+    display: inline-block;
+    height: 75%;
+    width: 30px;  /* Adjust width for better visibility */
+    position: relative;
+    border-radius: 5px;
+}
+
+.bar-label {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Sorting Steps Section */
+#steps-container {
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    max-width: 50vw;
+    margin: 20px auto;
+    background-color: #534e4e97;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000000;  /* Border around the step container for better visibility */
+}
+
+#steps-container h3 {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+#steps-container div {
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #000000;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #7570d4;  /* A green bar on the left for each step */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Highlight the current step */
+#steps-container div.current-step {
+    background-color: lightblue;
+    border-left-color: #32209d;
+    font-weight: bold;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    #array-container {
+        width: 80vw;
+        height: 40vh;
+    }
+
+    #controls {
+        width: 90%;
+    }
+
+    #steps-container {
+        width: 80%;
+    }
+
+    .bar {
+        width: 25px;
+    }
+}
